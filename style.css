@@ -31,8 +31,22 @@ header {
     background-color: #eee;
 }
 
+@media (max-width: 600px) {
+    #header {
+        flex-wrap: wrap;
+    }
+}
+
 .logo {
     width: 60vw;
+}
+
+@media (max-width: 650px) {
+    .logo {
+        margin-top: 15px;
+        width: 100%;
+        position: relative;
+    }
 }
 
 .logo > img {
@@ -45,11 +59,38 @@ header {
     margin-left: 20px;
 }
 
+@media (max-width: 650px) {
+    .logo > img {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 650px) {
+    nav {
+        margin-top: 10px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0 50px;
+    }
+    nav li {
+        padding-bottom: 5px;
+    }
+}
+
 nav > ul {
     width: 35vw;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+}
+
+@media (max-width: 650px) {
+    nav > ul {
+        flex-direction: column;
+    }
 }
 
 #our-mission {
@@ -60,6 +101,12 @@ nav > ul {
     text-align: center;
     height: 520px;
     margin-top: 90px;
+}
+
+@media (max-width: 650px) {
+    #our-mission {
+        margin-top: 200px;
+    }
 }
 
 #our-mission > .icon {
@@ -92,6 +139,12 @@ nav > ul {
     color: #343a40;
 }
 
+@media (max-width: 650px) {
+    #catalog .icon {
+        display: none;
+    }
+}
+
 #catalog .desc {
     display: flex;
     flex-direction: column;
@@ -99,6 +152,15 @@ nav > ul {
     height: 125px;
     width: 80vw;
     padding: 5px;
+}
+
+@media (max-width: 650px) {
+    #catalog .desc {
+        width: 100%;
+        text-align: center;
+        padding: 0;
+        height: 150px;
+    }
 }
 
 #contact-us {
@@ -135,3 +197,10 @@ nav > ul {
 #contact-us input[type="submit"]:hover {
     background-color: rgb(46, 49, 49);
     transition: background-color 1s;
+}
+
+.btn {
+    height: 40px;
+    font-size: 1em;
+    cursor: pointer;
+}
